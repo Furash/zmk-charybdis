@@ -7,10 +7,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT
 	default y
 
-# Use Bluetooth for split communication
-config ZMK_SPLIT_BLE
-	default y
-
 endif
 
 if SHIELD_CHARYBDIS_RIGHT

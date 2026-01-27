@@ -3,9 +3,21 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
 config ZMK_KEYBOARD_NAME
 	default "Charybdis"
 
-# Disable split mode - both sides work independently via USB
+# Enable split mode with Bluetooth
 config ZMK_SPLIT
-	default n
+	default y
+
+# Use Bluetooth for split communication
+config ZMK_SPLIT_BLE
+	default y
+
+endif
+
+if SHIELD_CHARYBDIS_RIGHT
+
+# Right side is central - connects to computer via USB and to left via BLE
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
 
 endif
 

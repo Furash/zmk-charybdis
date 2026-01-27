@@ -3,15 +3,9 @@ if SHIELD_CHARYBDIS_LEFT || SHIELD_CHARYBDIS_RIGHT
 config ZMK_KEYBOARD_NAME
 	default "Charybdis"
 
+# Disable split mode - both sides work independently via USB
 config ZMK_SPLIT
-	default y
-
-endif
-
-if SHIELD_CHARYBDIS_RIGHT
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+	default n
 
 endif
 
